@@ -1,4 +1,4 @@
--------------------------------------------- CSV Analysis Web Application -------------------------------------------------
+-------------------------------------------- CSV Analysis Web Application ------------------------------------------
 
 Django-based web application which can allows user to upload the csv file for analysis.
 Performed data analysis using pandas and numpy, and displays the results and visualizations on the web interface.
