@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analysis Results</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        header {
+            background-color:rgb(189, 9, 81);
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+            font-size: 1.5rem;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .container {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        table th,
+        table td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+        table th {
+            background-color:rgba(255, 7, 7, 0.55);
+            color: white;
+        }
+        img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+            margin: 20px auto;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+            color: #666;
+            font-size: 0.9rem;
+        }
+        .back-link {
+            display: inline-block;
+            margin: 20px 0;
+            text-decoration: none;
+            color:rgb(76, 170, 175);
+            font-weight: bold;
+        }
+        .back-link:hover {
+            color:rgb(62, 15, 127);
+        }
+    </style>
+</head>
+<body>
+    <header>Analysis Results</header>
+    <div class="container">
+        <h2>Data Overview</h2>
+        {{ head|safe }}
+        
+        <h2>Missing Values</h2>
+        {{ missing_summary|safe }}
+        
+        <h2>Summary Statistics</h2>
+        {{ stats|safe }}
+        
+        {% if hist_url %}
+        <h2>Histogram</h2>
+        <img src="{{ hist_url }}" alt="Histogram">
+        {% endif %}
+        
+        <a href="/" class="back-link">Upload Another File</a>
+    </div>
+    <footer>&copy; 2024 Your Web Application</footer>
+</body>
+</html>
