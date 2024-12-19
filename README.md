@@ -10,3 +10,19 @@ Performed data analysis using pandas and numpy, and displays the results and vis
 3. Data Visualization:
    -> Histogram for numerical columns.
    -> Results displayed on web pages.
+
+
+Use:  
+1. Upload a CSV file using the provided form.
+2. view:
+   -> Dataset preview
+   -> statistics
+   -> missing values from the dataset.
+3.Visualize numerical column distributions with histograms.
+
+
+Requirments:
+1. Django.
+2. pandas.
+3. matplotlib
+4. Html and css.
